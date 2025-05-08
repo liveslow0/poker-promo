@@ -2,6 +2,13 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+useEffect(() => {
+  AOS.init({ duration: 1000 });
+}, []);
+
 
 export default function Home() {
   useEffect(() => {
@@ -41,45 +48,28 @@ export default function Home() {
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
         {/* Hero */}
-        <section
-  className="relative h-screen flex flex-col items-center justify-center text-center px-4"
-  data-aos="fade-up"
->
-  <h2 className="text-5xl font-bold text-[#f2cc67] mb-4">Your Poker Journey Starts Here</h2>
-  <p className="text-xl max-w-xl mb-10 text-white">Explore platforms, tools, and expert strategies to level up your game.</p>
-  
-  <div className="flex flex-col md:flex-row gap-4">
-    <Link href="/platforms">
-      <button
-        className="bg-[#f2cc67] text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#ffcc53] hover:scale-105 transition-all duration-300"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        Explore Platforms
-      </button>
-    </Link>
+        <section className="relative h-screen flex items-center justify-center bg-[#24382c] text-white px-4">
+  <div data-aos="fade-up" className="text-center">
+    <div className="typewriter">
+  <h1>Your Poker Journey Starts Here</h1>
+</div>
+</h2>
+    <p className="text-xl max-w-xl mb-10">Explore platforms, tools, and expert strategies to level up your game.</p>
     
-    <Link href="/software">
-      <button
-        className="bg-white text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#f2cc67] hover:scale-105 transition-all duration-300"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        Products
-      </button>
-    </Link>
-
-    <Link href="/custom">
-      <button
-        className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300"
-        data-aos="fade-up"
-        data-aos-delay="300"
-      >
-        Services
-      </button>
-    </Link>
+    <div className="flex flex-col md:flex-row gap-4 justify-center">
+      <Link href="/platforms">
+        <button className="btn-primary">Explore Platforms</button>
+      </Link>
+      <Link href="/software">
+        <button className="btn-secondary">Products</button>
+      </Link>
+      <Link href="/custom">
+        <button className="btn-outline">Services</button>
+      </Link>
+    </div>
   </div>
 </section>
+
 
 
         {/* Features Grid */}
