@@ -41,15 +41,46 @@ export default function Home() {
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
         {/* Hero */}
-        <section className="relative h-screen flex flex-col items-center justify-center text-center px-4" data-aos="zoom-in">
-          <h2 className="text-5xl font-bold text-[#f2cc67] mb-4">Your Poker Journey Starts Here</h2>
-          <p className="text-xl max-w-xl mb-6">Explore platforms, tools, and expert strategies to level up your game.</p>
-          <Link href="/platforms">
-            <button className="bg-[#f2cc67] text-[#24382c] font-semibold px-8 py-3 rounded-full hover:bg-[#ffcc53] transition-all hover:scale-105">
-              Explore Platforms
-            </button>
-          </Link>
-        </section>
+        <section
+  className="relative h-screen flex flex-col items-center justify-center text-center px-4"
+  data-aos="fade-up"
+>
+  <h2 className="text-5xl font-bold text-[#f2cc67] mb-4">Your Poker Journey Starts Here</h2>
+  <p className="text-xl max-w-xl mb-10 text-white">Explore platforms, tools, and expert strategies to level up your game.</p>
+  
+  <div className="flex flex-col md:flex-row gap-4">
+    <Link href="/platforms">
+      <button
+        className="bg-[#f2cc67] text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#ffcc53] hover:scale-105 transition-all duration-300"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Explore Platforms
+      </button>
+    </Link>
+    
+    <Link href="/software">
+      <button
+        className="bg-white text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#f2cc67] hover:scale-105 transition-all duration-300"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        Products
+      </button>
+    </Link>
+
+    <Link href="/custom">
+      <button
+        className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        Services
+      </button>
+    </Link>
+  </div>
+</section>
+
 
         {/* Features Grid */}
         <section className="py-20 px-6 bg-white text-[#24382c]">
