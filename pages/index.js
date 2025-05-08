@@ -83,6 +83,55 @@ export default function Home() {
 
 
         {/* Features Grid */}
+  <section className="bg-white py-24 px-6" data-aos="fade-up">
+  <div className="max-w-6xl mx-auto text-center mb-16">
+    <h2 className="text-4xl font-bold text-[#24382c] mb-4">Explore What's Inside</h2>
+    <p className="text-lg text-[#24382c]">Each page on Poker.Promo is built to elevate your skills, understanding, and results.</p>
+  </div>
+
+  <div className="grid gap-8 md:grid-cols-3">
+    {/* Platforms */}
+    <Link href="/platforms">
+      <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in">
+        <h3 className="text-2xl font-bold mb-2">Top Platforms</h3>
+        <p>Compare trusted poker sites based on traffic, tournaments, software, and player reviews.</p>
+      </div>
+    </Link>
+
+    {/* For Beginners */}
+    <Link href="/about">
+      <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+        <h3 className="text-2xl font-bold mb-2">Start from Scratch</h3>
+        <p>New to poker? Learn rules, hand rankings, and simple strategies to build confidence fast.</p>
+      </div>
+    </Link>
+
+    {/* Poker Software */}
+    <Link href="/software">
+      <div className="bg-[#ffcc53] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+        <h3 className="text-2xl font-bold mb-2">Tools & Software</h3>
+        <p>Explore HUDs, solvers, tracking apps, and AI tools pros use to gain an edge.</p>
+      </div>
+    </Link>
+
+    {/* Poker Stories */}
+    <Link href="/stories">
+      <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+        <h3 className="text-2xl font-bold mb-2">Epic Stories</h3>
+        <p>Insane hands. High-stakes drama. Learn through legendary poker moments from real games.</p>
+      </div>
+    </Link>
+
+    {/* Custom Requests */}
+    <Link href="/custom">
+      <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+        <h3 className="text-2xl font-bold mb-2">Need Advice?</h3>
+        <p>Let us recommend platforms, tools or content based on your goals. We’re poker advisors.</p>
+      </div>
+    </Link>
+  </div>
+</section>
+
         <section className="py-20 px-6 bg-white text-[#24382c]">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
             {/* Verified Platforms */}
