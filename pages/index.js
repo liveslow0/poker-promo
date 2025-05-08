@@ -19,12 +19,18 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto p-6 space-y-12">
-        <section>
-          <h2 className="text-4xl font-bold text-[#ffcc53] mb-4">Welcome to Poker.Promo</h2>
-          <p className="text-lg">
-            Your complete guide to playing poker online: trusted platforms, powerful tools, beginner tutorials, and amazing stories from real players.
+      <main className="max-w-5xl mx-auto p-6 space-y-16">
+        <section className="text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#ffcc53] mb-6">Welcome to Poker.Promo</h2>
+          <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6">
+            Your trusted guide to the best poker platforms, tools, strategies, and true player stories. Explore our site whether you're a beginner or a seasoned grinder.
           </p>
+          <Link
+            href="/platforms"
+            className="inline-block bg-[#ffcc53] text-[#24382c] font-semibold px-6 py-3 rounded-md hover:bg-[#f2cc67] transition"
+          >
+            Start Exploring
+          </Link>
         </section>
 
         <section>
