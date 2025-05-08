@@ -42,25 +42,33 @@ export default function Home() {
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
         {/* Hero Section */}
-        <section className="animated-background text-white relative h-screen flex flex-col items-center justify-center text-center px-4">
-          <div data-aos="fade-up">
-            <div className="typewriter">
-              <h1>Your Poker Journey Starts Here</h1>
-            </div>
-            <p className="text-xl max-w-xl mb-10">Explore platforms, tools, and expert strategies to level up your game.</p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link href="/platforms">
-                <button className="bg-[#f2cc67] text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#ffcc53] hover:scale-105 transition-all duration-300">Explore Platforms</button>
-              </Link>
-              <Link href="/software">
-                <button className="bg-white text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#f2cc67] hover:scale-105 transition-all duration-300">Products</button>
-              </Link>
-              <Link href="/custom">
-                <button className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300">Services</button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        <section className="hypnotic-bg text-white h-screen flex flex-col items-center justify-center text-center px-4">
+  <div className="hypnotic-content" data-aos="fade-up">
+    <h1 className="text-5xl md:text-6xl font-bold text-[#f2cc67] mb-6">Your Poker Journey Starts Here</h1>
+    <p className="text-xl md:text-2xl max-w-2xl mb-10 text-white">
+      Explore expert strategies, trusted platforms, and tools that give you the edge.
+    </p>
+
+    <div className="flex flex-col md:flex-row gap-4 justify-center">
+      <Link href="/platforms">
+        <button className="bg-[#f2cc67] text-[#24382c] font-bold px-6 py-3 rounded-full hover:bg-[#ffcc53] hover:scale-105 shadow-xl transition-all duration-300">
+          Explore Platforms
+        </button>
+      </Link>
+      <Link href="/software">
+        <button className="bg-white text-[#24382c] font-bold px-6 py-3 rounded-full hover:bg-[#f2cc67] hover:scale-105 shadow-xl transition-all duration-300">
+          Our Products
+        </button>
+      </Link>
+      <Link href="/custom">
+        <button className="bg-[#24382c] border-2 border-[#f2cc67] text-white font-bold px-6 py-3 rounded-full hover:bg-[#1a2a20] hover:scale-105 shadow-xl transition-all duration-300">
+          Get Custom Help
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
+
 
         {/* What's Inside Grid */}
         <section className="bg-white py-24 px-6" data-aos="fade-up">
