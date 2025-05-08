@@ -1,24 +1,47 @@
 // pages/index.js
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+
+    const handleScroll = () => {
+      const nav = document.getElementById('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('shadow-lg', 'bg-[#24382c]');
+      } else {
+        nav.classList.remove('shadow-lg', 'bg-[#24382c]');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   return (
     <div className="min-h-screen bg-[#24382c] text-white font-sans">
-      <header className="bg-[#24382c] p-6 shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-          <h1 className="text-3xl font-bold text-[#ffcc53]">Poker.Promo</h1>
-          <nav className="mt-4 md:mt-0">
-            <ul className="flex flex-col md:flex-row gap-4 text-lg">
-              <li><Link className="hover:text-[#f2cc67] transition" href="/platforms">Platforms</Link></li>
-              <li><Link className="hover:text-[#f2cc67] transition" href="/about">For Beginners</Link></li>
-              <li><Link className="hover:text-[#f2cc67] transition" href="/software">Poker Software</Link></li>
-              <li><Link className="hover:text-[#f2cc67] transition" href="/stories">Poker Stories</Link></li>
-              <li><Link className="hover:text-[#f2cc67] transition" href="/custom">Custom Requests</Link></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <header
+  id="nav"
+  className="fixed w-full z-50 top-0 transition-all duration-300 px-6 py-4"
+>
+  <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <h1 className="text-[#ffcc53] font-bold text-2xl">Poker.Promo</h1>
+    <nav className="space-x-6 hidden md:block">
+      <Link href="/platforms"><a className="hover:text-[#f2cc67]">Platforms</a></Link>
+      <Link href="/about"><a className="hover:text-[#f2cc67]">Beginners</a></Link>
+      <Link href="/software"><a className="hover:text-[#f2cc67]">Software</a></Link>
+      <Link href="/stories"><a className="hover:text-[#f2cc67]">Stories</a></Link>
+      <Link href="/custom"><a className="hover:text-[#f2cc67]">Contact</a></Link>
+    </nav>
+  </div>
+</header>
+
 
       <main className="bg-white text-[#24382c]">
       <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/poker-hero.jpg)' }}>
@@ -53,6 +76,28 @@ export default function Home() {
             />
           </div>
         </section>
+
+        <section className="bg-white text-[#24382c] py-20 px-6">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+    <div data-aos="fade-up">
+      <img src="/assets/icon1.svg" className="mx-auto mb-4 w-16" />
+      <h3 className="text-xl font-semibold mb-2">Verified Platforms</h3>
+      <p className="text-sm">We recommend only the most trusted online poker sites.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100">
+      <img src="/assets/icon2.svg" className="mx-auto mb-4 w-16" />
+      <h3 className="text-xl font-semibold mb-2">Beginner Guides</h3>
+      <p className="text-sm">Learn the basics and start playing in minutes.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200">
+      <img src="/assets/icon3.svg" className="mx-auto mb-4 w-16" />
+      <h3 className="text-xl font-semibold mb-2">Advanced Tools</h3>
+      <p className="text-sm">Access HUDs, solvers, and bankroll managers.</p>
+    </div>
+  </div>
+</section>
+
+
 
         <section className="bg-[#f2cc67] text-[#24382c] py-20 px-6">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
