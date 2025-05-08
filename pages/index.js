@@ -1,46 +1,67 @@
+// pages/index.js
+import Link from 'next/link';
+
 export default function Home() {
   return (
-    <div style={{
-      backgroundColor: '#24382c',
-      color: '#f2cc67',
-      minHeight: '100vh',
-      padding: '2rem',
-      fontFamily: 'Arial, sans-serif'
-    }}>
-      <header style={{ marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '3rem', color: '#ffcc53' }}>Welcome to Poker.Promo</h1>
-        <p style={{ fontSize: '1.2rem', maxWidth: '700px' }}>
-          Your trusted gateway to the best online poker platforms, beginner guides, advanced software, and stories from the felt. Whether you're just learning or grinding high stakes, Poker.Promo has something tailored for you.
-        </p>
+    <div className="min-h-screen bg-[#24382c] text-[#f2cc67] font-sans">
+      <header className="bg-[#24382c] p-6 shadow-md sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
+          <h1 className="text-3xl font-bold text-[#ffcc53]">Poker.Promo</h1>
+          <nav className="mt-4 md:mt-0">
+            <ul className="flex flex-col md:flex-row gap-4 text-lg">
+              <li><Link className="hover:text-white transition" href="/platforms">Platforms</Link></li>
+              <li><Link className="hover:text-white transition" href="/about">For Beginners</Link></li>
+              <li><Link className="hover:text-white transition" href="/software">Poker Software</Link></li>
+              <li><Link className="hover:text-white transition" href="/stories">Poker Stories</Link></li>
+              <li><Link className="hover:text-white transition" href="/custom">Custom Requests</Link></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
-      <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '2rem', color: '#ffcc53' }}>Top Online Poker Platforms</h2>
-        <ul>
-          <li>
-            <a href="https://www.pokerstars.com" target="_blank" style={{ color: '#f2cc67', textDecoration: 'underline' }}>PokerStars</a> – Industry leader with massive traffic and great tournaments.
-          </li>
-          <li>
-            <a href="https://www.ggpoker.com" target="_blank" style={{ color: '#f2cc67', textDecoration: 'underline' }}>GGPoker</a> – Fast-growing with innovative features like staking and built-in HUD.
-          </li>
-          <li>
-            <a href="https://www.partypoker.com" target="_blank" style={{ color: '#f2cc67', textDecoration: 'underline' }}>PartyPoker</a> – Long-established with strong software and security.
-          </li>
-        </ul>
-      </section>
+      <main className="max-w-5xl mx-auto p-6 space-y-12">
+        <section>
+          <h2 className="text-4xl font-bold text-[#ffcc53] mb-4">Welcome to Poker.Promo</h2>
+          <p className="text-lg">
+            Your complete guide to playing poker online: trusted platforms, powerful tools, beginner tutorials, and amazing stories from real players.
+          </p>
+        </section>
 
-      <section style={{ marginBottom: '2rem' }}>
-        <h2 style={{ fontSize: '2rem', color: '#ffcc53' }}>Why Poker.Promo?</h2>
-        <ul>
-          <li>🎯 Curated platform recommendations for every skill level</li>
-          <li>📚 Easy-to-understand poker guides and rules for beginners</li>
-          <li>🛠 Access to powerful poker software to sharpen your edge</li>
-          <li>🃏 True stories from real poker players around the world</li>
-        </ul>
-      </section>
+        <section>
+          <h3 className="text-2xl font-bold text-[#ffcc53] mb-3">Top Online Poker Platforms</h3>
+          <ul className="list-disc list-inside space-y-2">
+            <li>
+              <a href="https://www.pokerstars.com" target="_blank" className="text-[#f2cc67] underline hover:text-white">PokerStars</a> – Massive player pool, great tournaments.
+            </li>
+            <li>
+              <a href="https://www.ggpoker.com" target="_blank" className="text-[#f2cc67] underline hover:text-white">GGPoker</a> – Modern software, built-in tools, staking system.
+            </li>
+            <li>
+              <a href="https://www.partypoker.com" target="_blank" className="text-[#f2cc67] underline hover:text-white">PartyPoker</a> – Clean interface, secure gameplay.
+            </li>
+          </ul>
+        </section>
 
-      <footer style={{ marginTop: '4rem', fontSize: '0.9rem', color: '#999' }}>
-        <p>© {new Date().getFullYear()} Poker.Promo – Your trusted poker resource.</p>
+        <section>
+          <h3 className="text-2xl font-bold text-[#ffcc53] mb-3">Why Choose Poker.Promo?</h3>
+          <ul className="space-y-1 list-disc list-inside">
+            <li>🎯 Hand-picked platforms for beginners and pros</li>
+            <li>📚 Clear beginner guides with no fluff</li>
+            <li>🧠 Advanced software suggestions to boost your game</li>
+            <li>🃏 Real poker stories that entertain and educate</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3 className="text-2xl font-bold text-[#ffcc53] mb-3">Need Personalized Help?</h3>
+          <p>
+            Visit our <Link href="/custom" className="underline text-[#f2cc67] hover:text-white">Custom Requests</Link> page and tell us what you need — we'll match you with the perfect poker solution.
+          </p>
+        </section>
+      </main>
+
+      <footer className="text-center mt-12 py-6 text-sm text-[#999]">
+        <p>© {new Date().getFullYear()} Poker.Promo – Built for poker players, by poker players.</p>
       </footer>
     </div>
   );
