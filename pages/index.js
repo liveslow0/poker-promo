@@ -21,20 +21,17 @@ export default function Home() {
       </header>
 
       <main className="bg-white text-[#24382c]">
-        <section className="bg-cover bg-center text-center text-white py-24 px-6 relative" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1521575107034-dc1e1b28e3c1?auto=format&fit=crop&w=1470&q=80)' }}>
-          <div className="bg-black bg-opacity-60 p-10 rounded-lg inline-block">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Play. Learn. Win.</h2>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-6">
-              Discover top poker platforms, sharpen your strategy, and read real player stories — all in one place.
-            </p>
-            <Link
-              href="/platforms"
-              className="inline-block bg-[#ffcc53] text-[#24382c] font-semibold px-6 py-3 rounded-full hover:bg-[#f2cc67] transition"
-            >
-              Start Exploring
-            </Link>
-          </div>
-        </section>
+      <section className="relative h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: 'url(/assets/poker-hero.jpg)' }}>
+  <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+  <div className="z-10 text-center text-white px-4" data-aos="fade-in">
+    <h1 className="text-4xl md:text-6xl font-bold mb-4">Your Poker Journey Starts Here</h1>
+    <p className="text-lg md:text-xl mb-6">Guiding you through the best platforms, stories, and tools.</p>
+    <Link href="/platforms">
+      <a className="bg-[#f2cc67] text-[#24382c] px-6 py-3 rounded-full hover:bg-[#ffcc53] font-semibold transition">Explore Platforms</a>
+    </Link>
+  </div>
+</section>
+
 
         <section className="max-w-6xl mx-auto py-20 px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
