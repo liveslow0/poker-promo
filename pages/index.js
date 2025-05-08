@@ -184,6 +184,19 @@ export default function Home() {
         </section>
       </main>
 
+<section className="bg-[#ffcc53] text-[#24382c] py-20 px-6" data-aos="zoom-in">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl font-extrabold mb-4">Ready to Level Up Your Poker Game?</h2>
+    <p className="text-lg mb-8">Join thousands of players getting weekly poker tips, tools, and exclusive content.</p>
+    <Link href="/custom">
+      <button className="bg-[#24382c] text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all hover:bg-[#1e2f25]">
+        Get Custom Recommendations
+      </button>
+    </Link>
+  </div>
+</section>
+
+
       {/* Footer */}
       <footer className="text-center py-6 bg-[#24382c] text-[#f2cc67] text-sm">
         <p>© {new Date().getFullYear()} Poker.Promo – Built for poker players, by poker players.</p>
