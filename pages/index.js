@@ -43,6 +43,73 @@ export default function Home() {
 
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
+
+{/* =========================
+    POKER STORIES SECTION
+   ========================= */}
+<section className="bg-[#24382c] text-white py-24 px-6" data-aos="fade-up">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold mb-12 text-center text-[#f2cc67]">Legendary Poker Stories</h2>
+    <div className="space-y-12">
+      <div className="p-6 bg-[#1a2a20] rounded-xl shadow-md hover:scale-[1.02] transition-all duration-300">
+        <h3 className="text-2xl font-semibold mb-2">Phil Ivey’s $1M Bluff vs Paul Jackson</h3>
+        <p className="text-sm leading-relaxed">In a hand that has become poker folklore, Ivey and Jackson played a bluff war with nothing in hand — raising and re-raising each other into oblivion. Neither had a pair, but Ivey’s final bet forced a fold and won the pot with 3-high!</p>
+      </div>
+      <div className="p-6 bg-[#1a2a20] rounded-xl shadow-md hover:scale-[1.02] transition-all duration-300">
+        <h3 className="text-2xl font-semibold mb-2">Tom Dwan vs Barry Greenstein – $919K Pot</h3>
+        <p className="text-sm leading-relaxed">Holding just a draw, Dwan triple-barreled into a monster from Barry. With pure guts and timing, he made the legend fold the best hand, showing the new generation had arrived.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* =========================
+    POKER STATS SECTION
+   ========================= */}
+<section className="bg-white text-[#24382c] py-24 px-6" data-aos="zoom-in">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-4xl font-bold mb-8">What Are The Odds?</h2>
+    <p className="text-lg mb-8">Ever wonder how rare that Full House or Royal Flush really is? Here’s the math behind it:</p>
+    <img src="/assets/poker-hands-probability-chart.png" alt="Poker Stats Chart" className="rounded-lg shadow-lg mx-auto w-full md:w-3/4" />
+    <p className="text-sm mt-6">Based on Texas Hold'em hand data. Source: WSOP Analysis & Poker Probabilities Study (2023)</p>
+  </div>
+</section>
+
+{/* =========================
+    POKER TIPS CAROUSEL
+   ========================= */}
+<section className="bg-[#1a2a20] text-white py-24 px-6" data-aos="fade-up">
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-4xl font-bold text-[#f2cc67] mb-8">Quick Poker Tips</h2>
+    <div className="relative overflow-hidden h-40">
+      <div className="animate-carousel space-y-6">
+        <blockquote className="text-xl italic opacity-90">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Matt Damon, Rounders</blockquote>
+        <blockquote className="text-xl italic opacity-90">“Fold more often. Most new players lose by calling too much.”</blockquote>
+        <blockquote className="text-xl italic opacity-90">“Position is power. Play more hands from the button and cutoff.”</blockquote>
+        <blockquote className="text-xl italic opacity-90">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
+        <blockquote className="text-xl italic opacity-90">“Bluff with purpose, not just impulse.”</blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style jsx>{`
+  .animate-carousel {
+    display: flex;
+    flex-direction: column;
+    animation: scrollTips 25s linear infinite;
+  }
+  @keyframes scrollTips {
+    0% { transform: translateY(0%); }
+    20% { transform: translateY(-100%); }
+    40% { transform: translateY(-200%); }
+    60% { transform: translateY(-300%); }
+    80% { transform: translateY(-400%); }
+    100% { transform: translateY(0%); }
+  }
+`}</style>
+
+        
         {/* Hero Section */}
         <section className="animated-background text-white relative h-screen flex flex-col items-center justify-center text-center px-4">
           <div data-aos="fade-up">
