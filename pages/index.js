@@ -47,7 +47,10 @@ export default function Home() {
 
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
-        {/* Hero */}
+        <section className="animated-background text-white">
+  {/* hero content */}
+</section>
+
         <section className="relative h-screen flex items-center justify-center bg-[#24382c] text-white px-4">
   <div data-aos="fade-up" className="text-center">
     <div className="typewriter">
