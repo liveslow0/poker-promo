@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -22,7 +21,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#24382c] text-white font-sans">
-      {/* Single Navigation */}
+      {/* Header */}
       <header
         id="nav"
         className="fixed w-full z-50 top-0 transition-all duration-300 px-6 py-4 bg-[#24382c]"
@@ -39,6 +38,7 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
         {/* Hero */}
         <section className="relative h-screen flex flex-col items-center justify-center text-center px-4" data-aos="zoom-in">
@@ -54,34 +54,45 @@ export default function Home() {
         {/* Features Grid */}
         <section className="py-20 px-6 bg-white text-[#24382c]">
           <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12 text-center">
+            {/* Verified Platforms */}
             <div data-aos="fade-up" className="hover:scale-105 transition-all duration-300">
               <img src="/assets/icon1.svg" className="mx-auto mb-4 w-16" />
               <h3 className="text-xl font-semibold mb-2">Verified Platforms</h3>
               <p className="text-sm mb-4">Only trusted, regulated poker rooms make our list.</p>
               <Link href="/platforms">
-                <a className="text-sm underline text-[#f2cc67] hover:text-[#ffcc53] transition">Compare Sites</a>
+                <button className="text-sm bg-[#24382c] text-white px-4 py-2 rounded-full hover:bg-[#1e2f25] transition">
+                  Compare Sites
+                </button>
               </Link>
             </div>
+
+            {/* Beginner Guides */}
             <div data-aos="fade-up" data-aos-delay="100" className="hover:scale-105 transition-all duration-300">
               <img src="/assets/icon2.svg" className="mx-auto mb-4 w-16" />
               <h3 className="text-xl font-semibold mb-2">Beginner Guides</h3>
               <p className="text-sm mb-4">Start from zero with interactive, visual walkthroughs.</p>
               <Link href="/about">
-                <a className="text-sm underline text-[#f2cc67] hover:text-[#ffcc53] transition">Read Guides</a>
+                <button className="text-sm bg-[#24382c] text-white px-4 py-2 rounded-full hover:bg-[#1e2f25] transition">
+                  Read Guides
+                </button>
               </Link>
             </div>
+
+            {/* Advanced Tools */}
             <div data-aos="fade-up" data-aos-delay="200" className="hover:scale-105 transition-all duration-300">
               <img src="/assets/icon3.svg" className="mx-auto mb-4 w-16" />
               <h3 className="text-xl font-semibold mb-2">Advanced Tools</h3>
               <p className="text-sm mb-4">We review software, solvers, and pro tools to gain edge.</p>
               <Link href="/software">
-                <a className="text-sm underline text-[#f2cc67] hover:text-[#ffcc53] transition">See Tools</a>
+                <button className="text-sm bg-[#24382c] text-white px-4 py-2 rounded-full hover:bg-[#1e2f25] transition">
+                  See Tools
+                </button>
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Call to Action Section */}
+        {/* Benefits Section */}
         <section className="bg-[#f2cc67] text-[#24382c] py-20 px-6" data-aos="fade-up">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -117,6 +128,7 @@ export default function Home() {
         </section>
       </main>
 
+      {/* Footer */}
       <footer className="text-center py-6 bg-[#24382c] text-[#f2cc67] text-sm">
         <p>© {new Date().getFullYear()} Poker.Promo – Built for poker players, by poker players.</p>
       </footer>
