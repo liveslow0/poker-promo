@@ -44,6 +44,70 @@ export default function Home() {
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
 
+
+        
+        {/* Hero Section */}
+        <section className="animated-background text-white relative h-screen flex flex-col items-center justify-center text-center px-4">
+          <div data-aos="fade-up">
+            <div className="typewriter">
+              <h1>Your Poker Journey Starts Here</h1>
+            </div>
+            <p className="text-xl max-w-xl mb-10">Explore platforms, tools, and expert strategies to level up your game.</p>
+            <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <Link href="/platforms">
+                <button className="bg-[#f2cc67] text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#ffcc53] hover:scale-105 transition-all duration-300">Explore Platforms</button>
+              </Link>
+              <Link href="/software">
+                <button className="bg-white text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#f2cc67] hover:scale-105 transition-all duration-300">Products</button>
+              </Link>
+              <Link href="/custom">
+                <button className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300">Services</button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* What's Inside Grid */}
+        <section className="bg-white py-24 px-6" data-aos="fade-up">
+          <div className="max-w-6xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#24382c] mb-4">Explore What's Inside</h2>
+            <p className="text-lg text-[#24382c]">Each page on Poker.Promo is built to elevate your skills, understanding, and results.</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-3">
+            <Link href="/platforms">
+              <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in">
+                <h3 className="text-2xl font-bold mb-2">Top Platforms</h3>
+                <p>Compare trusted poker sites based on traffic, tournaments, software, and player reviews.</p>
+              </div>
+            </Link>
+            <Link href="/about">
+              <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
+                <h3 className="text-2xl font-bold mb-2">Start from Scratch</h3>
+                <p>New to poker? Learn rules, hand rankings, and simple strategies to build confidence fast.</p>
+              </div>
+            </Link>
+            <Link href="/software">
+              <div className="bg-[#ffcc53] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
+                <h3 className="text-2xl font-bold mb-2">Tools & Software</h3>
+                <p>Explore HUDs, solvers, tracking apps, and AI tools pros use to gain an edge.</p>
+              </div>
+            </Link>
+            <Link href="/stories">
+              <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
+                <h3 className="text-2xl font-bold mb-2">Epic Stories</h3>
+                <p>Insane hands. High-stakes drama. Learn through legendary poker moments from real games.</p>
+              </div>
+            </Link>
+            <Link href="/custom">
+              <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
+                <h3 className="text-2xl font-bold mb-2">Need Advice?</h3>
+                <p>Let us recommend platforms, tools or content based on your goals. We’re poker advisors.</p>
+              </div>
+            </Link>
+          </div>
+        </section>
+
 {/* =========================
     POKER STORIES SECTION
    ========================= */}
@@ -109,69 +173,8 @@ export default function Home() {
   }
 `}</style>
 
-        
-        {/* Hero Section */}
-        <section className="animated-background text-white relative h-screen flex flex-col items-center justify-center text-center px-4">
-          <div data-aos="fade-up">
-            <div className="typewriter">
-              <h1>Your Poker Journey Starts Here</h1>
-            </div>
-            <p className="text-xl max-w-xl mb-10">Explore platforms, tools, and expert strategies to level up your game.</p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Link href="/platforms">
-                <button className="bg-[#f2cc67] text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#ffcc53] hover:scale-105 transition-all duration-300">Explore Platforms</button>
-              </Link>
-              <Link href="/software">
-                <button className="bg-white text-[#24382c] font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#f2cc67] hover:scale-105 transition-all duration-300">Products</button>
-              </Link>
-              <Link href="/custom">
-                <button className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300">Services</button>
-              </Link>
-            </div>
-          </div>
-        </section>
 
-        {/* What's Inside Grid */}
-        <section className="bg-white py-24 px-6" data-aos="fade-up">
-          <div className="max-w-6xl mx-auto text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#24382c] mb-4">Explore What's Inside</h2>
-            <p className="text-lg text-[#24382c]">Each page on Poker.Promo is built to elevate your skills, understanding, and results.</p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            <Link href="/platforms">
-              <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in">
-                <h3 className="text-2xl font-bold mb-2">Top Platforms</h3>
-                <p>Compare trusted poker sites based on traffic, tournaments, software, and player reviews.</p>
-              </div>
-            </Link>
-            <Link href="/about">
-              <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="100">
-                <h3 className="text-2xl font-bold mb-2">Start from Scratch</h3>
-                <p>New to poker? Learn rules, hand rankings, and simple strategies to build confidence fast.</p>
-              </div>
-            </Link>
-            <Link href="/software">
-              <div className="bg-[#ffcc53] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="200">
-                <h3 className="text-2xl font-bold mb-2">Tools & Software</h3>
-                <p>Explore HUDs, solvers, tracking apps, and AI tools pros use to gain an edge.</p>
-              </div>
-            </Link>
-            <Link href="/stories">
-              <div className="bg-[#24382c] text-white p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="300">
-                <h3 className="text-2xl font-bold mb-2">Epic Stories</h3>
-                <p>Insane hands. High-stakes drama. Learn through legendary poker moments from real games.</p>
-              </div>
-            </Link>
-            <Link href="/custom">
-              <div className="bg-[#f2cc67] text-[#24382c] p-6 rounded-xl hover:scale-105 hover:shadow-xl transition-all duration-300 cursor-pointer" data-aos="zoom-in" data-aos-delay="400">
-                <h3 className="text-2xl font-bold mb-2">Need Advice?</h3>
-                <p>Let us recommend platforms, tools or content based on your goals. We’re poker advisors.</p>
-              </div>
-            </Link>
-          </div>
-        </section>
-
+  
         {/* Final CTA */}
         <section className="text-center py-20 px-6 bg-white" data-aos="fade-up">
           <h3 className="text-3xl font-bold mb-4">Need Help Getting Started?</h3>
