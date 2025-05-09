@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import '../styles/globals.css';
+
 
 export default function BeginnersPage() {
   const [selectedGame, setSelectedGame] = useState(null);
