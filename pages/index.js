@@ -3,8 +3,6 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
-
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
@@ -43,9 +41,6 @@ export default function Home() {
 
       {/* Main */}
       <main className="bg-white text-[#24382c] pt-24">
-
-
-        
         {/* Hero Section */}
         <section className="animated-background text-white relative h-screen flex flex-col items-center justify-center text-center px-4">
           <div data-aos="fade-up">
@@ -108,74 +103,40 @@ export default function Home() {
           </div>
         </section>
 
-{/* =========================
-    POKER STORIES SECTION
-   ========================= */}
-<section className="bg-[#24382c] text-white py-24 px-6" data-aos="fade-up">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl font-bold mb-12 text-center text-[#f2cc67]">Legendary Poker Stories</h2>
-    <div className="space-y-12">
-      <div className="p-6 bg-[#1a2a20] rounded-xl shadow-md hover:scale-[1.02] transition-all duration-300">
-        <h3 className="text-2xl font-semibold mb-2">Phil Ivey’s $1M Bluff vs Paul Jackson</h3>
-        <p className="text-sm leading-relaxed">In a hand that has become poker folklore, Ivey and Jackson played a bluff war with nothing in hand — raising and re-raising each other into oblivion. Neither had a pair, but Ivey’s final bet forced a fold and won the pot with 3-high!</p>
-      </div>
-      <div className="p-6 bg-[#1a2a20] rounded-xl shadow-md hover:scale-[1.02] transition-all duration-300">
-        <h3 className="text-2xl font-semibold mb-2">Tom Dwan vs Barry Greenstein – $919K Pot</h3>
-        <p className="text-sm leading-relaxed">Holding just a draw, Dwan triple-barreled into a monster from Barry. With pure guts and timing, he made the legend fold the best hand, showing the new generation had arrived.</p>
-      </div>
-    </div>
-  </div>
-</section>
+        {/* Poker Tips Section */}
+        <section className="bg-[#1a2a20] text-white py-24 px-6" data-aos="fade-up">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-[#f2cc67] mb-8">Quick Poker Tips</h2>
+            <div className="relative overflow-hidden h-40">
+              <div className="animate-carousel space-y-6">
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Rounders</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="100">“Fold more often. Most new players lose by calling too much.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="200">“Position is power. Play more hands from the button and cutoff.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="300">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="400">“Bluff with purpose, not just impulse.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="500">“Never slowplay your monsters against loose opponents.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="600">“Every chip saved is a chip earned. Don’t waste chips calling bad bets.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="700">“Aggression wins tournaments. Don’t be afraid to put pressure.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="800">“Tilt control is skill. Walk away when emotions take over.”</blockquote>
+                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="900">“Great players fold great hands. Don’t marry your cards.”</blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
 
-{/* =========================
-    POKER STATS SECTION
-   ========================= */}
-<section className="bg-white text-[#24382c] py-24 px-6" data-aos="zoom-in">
-  <div className="max-w-5xl mx-auto text-center">
-    <h2 className="text-4xl font-bold mb-8">What Are The Odds?</h2>
-    <p className="text-lg mb-8">Ever wonder how rare that Full House or Royal Flush really is? Here’s the math behind it:</p>
-    <img src="/assets/poker-hands-probability-chart.png" alt="Poker Stats Chart" className="rounded-lg shadow-lg mx-auto w-full md:w-3/4" />
-    <p className="text-sm mt-6">Based on Texas Hold'em hand data. Source: WSOP Analysis & Poker Probabilities Study (2023)</p>
-  </div>
-</section>
+        <style jsx>{`
+          .animate-carousel {
+            display: flex;
+            flex-direction: column;
+            animation: scrollTips 30s linear infinite;
+          }
+          @keyframes scrollTips {
+            0% { transform: translateY(0%); }
+            100% { transform: translateY(-100%); }
+          }
+        `}</style>
 
-{/* =========================
-    POKER TIPS CAROUSEL
-   ========================= */}
-<section className="bg-[#1a2a20] text-white py-24 px-6" data-aos="fade-up">
-  <div className="max-w-3xl mx-auto text-center">
-    <h2 className="text-4xl font-bold text-[#f2cc67] mb-8">Quick Poker Tips</h2>
-    <div className="relative overflow-hidden h-40">
-      <div className="animate-carousel space-y-6">
-        <blockquote className="text-xl italic opacity-90">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Matt Damon, Rounders</blockquote>
-        <blockquote className="text-xl italic opacity-90">“Fold more often. Most new players lose by calling too much.”</blockquote>
-        <blockquote className="text-xl italic opacity-90">“Position is power. Play more hands from the button and cutoff.”</blockquote>
-        <blockquote className="text-xl italic opacity-90">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
-        <blockquote className="text-xl italic opacity-90">“Bluff with purpose, not just impulse.”</blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style jsx>{`
-  .animate-carousel {
-    display: flex;
-    flex-direction: column;
-    animation: scrollTips 25s linear infinite;
-  }
-  @keyframes scrollTips {
-    0% { transform: translateY(0%); }
-    20% { transform: translateY(-100%); }
-    40% { transform: translateY(-200%); }
-    60% { transform: translateY(-300%); }
-    80% { transform: translateY(-400%); }
-    100% { transform: translateY(0%); }
-  }
-`}</style>
-
-
-  
-        {/* Final CTA */}
+        {/* CTA */}
         <section className="text-center py-20 px-6 bg-white" data-aos="fade-up">
           <h3 className="text-3xl font-bold mb-4">Need Help Getting Started?</h3>
           <p className="text-lg max-w-xl mx-auto mb-6">Let us know your poker goals, and we’ll build your personal strategy toolkit.</p>
@@ -185,20 +146,19 @@ export default function Home() {
             </button>
           </Link>
         </section>
+
+        <section className="bg-[#ffcc53] text-[#24382c] py-20 px-6" data-aos="zoom-in">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-extrabold mb-4">Ready to Level Up Your Poker Game?</h2>
+            <p className="text-lg mb-8">Join thousands of players getting weekly poker tips, tools, and exclusive content.</p>
+            <Link href="/custom">
+              <button className="bg-[#24382c] text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all hover:bg-[#1e2f25]">
+                Get Custom Recommendations
+              </button>
+            </Link>
+          </div>
+        </section>
       </main>
-
-<section className="bg-[#ffcc53] text-[#24382c] py-20 px-6" data-aos="zoom-in">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-4xl font-extrabold mb-4">Ready to Level Up Your Poker Game?</h2>
-    <p className="text-lg mb-8">Join thousands of players getting weekly poker tips, tools, and exclusive content.</p>
-    <Link href="/custom">
-      <button className="bg-[#24382c] text-white px-8 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-all hover:bg-[#1e2f25]">
-        Get Custom Recommendations
-      </button>
-    </Link>
-  </div>
-</section>
-
 
       {/* Footer */}
       <footer className="text-center py-6 bg-[#24382c] text-[#f2cc67] text-sm">
@@ -207,3 +167,4 @@ export default function Home() {
     </div>
   );
 }
+
