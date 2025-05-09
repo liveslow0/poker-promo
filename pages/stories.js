@@ -1,132 +1,114 @@
 // pages/stories.js
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const storiesData = [
+  {
+    title: "Phil Ivey’s $1M Bluff vs Paul Jackson",
+    summary: "A bluff war with no pair that ended in a legendary 3-high win.",
+    details:
+      "In one of the most iconic moments of high-stakes poker, Phil Ivey and Paul Jackson engaged in an intense series of re-raises while holding absolutely nothing. Each tried to out-bluff the other, but in the end, Ivey's final bet pushed Jackson off his hand, and Ivey scooped the pot with just 3-high. The hand is now studied for its psychological warfare and fearlessness."
+  },
+  {
+    title: "Tom Dwan vs Barry Greenstein – $919K Pot",
+    summary: "Dwan fires all streets with a draw and makes a legend fold.",
+    details:
+      "Tom 'durrrr' Dwan built his reputation on aggression, and this hand was a prime example. Facing Barry Greenstein, who flopped top pair, Dwan bet all three streets with just a straight draw. His final shove for nearly $500,000 forced Greenstein to lay down the best hand. The clip went viral and cemented Dwan's reputation as fearless and sharp."
+  },
+  {
+    title: "Daniel Negreanu Reads Viffer Like a Book",
+    summary: "Negreanu calls down with third pair and nails Viffer’s hand exactly.",
+    details:
+      "During a televised cash game, Daniel Negreanu and Viffer got into a weird and talkative hand. Viffer kept chatting and raising, but Negreanu kept up the banter, analyzing aloud. Ultimately, Daniel called with a weak pair and immediately said Viffer had queen-ten. He was dead right. The crowd (and Viffer) were stunned at his psychic read."
+  },
+  {
+    title: "Vanessa Selbst’s Brutal Cooler at WSOP",
+    summary: "Selbst flops a full house but runs into quads in a $100K event.",
+    details:
+      "During a $100K WSOP High Roller, Selbst had pocket aces and flopped aces full. Her opponent, Gaelle Baumann, had pocket eights and hit quad eights. The money went in, and the table gasped as the cards flipped. Vanessa couldn’t believe it and walked off in shock. The clip became one of the most viewed poker coolers of all time."
+  },
+  {
+    title: "Scotty Nguyen’s ‘You Call It’s All Over Baby’",
+    summary: "Scotty wins the WSOP Main Event with a bold prediction.",
+    details:
+      "Scotty Nguyen, known for his charisma and catchphrases, was heads-up in the WSOP Main Event. On the final hand, he told his opponent, 'You call, it’s gonna be all over, baby.' The opponent called, Scotty tabled top two pair, and it was indeed all over. The quote became etched in poker history forever."
+  },
+  {
+    title: "Chris Moneymaker’s Bluff of the Century",
+    summary: "Amateur Moneymaker bluffs pro Farha in 2003 Main Event.",
+    details:
+      "In 2003, Chris Moneymaker bluffed Sammy Farha off a better hand on the biggest stage in poker. With just king high, Moneymaker fired the river in a three-bet pot. Farha tanked for minutes before folding. The hand shocked the world and sparked the online poker boom that followed."
+  }
+];
+
 export default function Stories() {
+  const [expanded, setExpanded] = useState(null);
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  const stories = [
-    {
-      title: 'Doyle Brunson vs Tom Dwan – Battle of Generations',
-      content: `When legends clash, it's never just about the cards — it's about time, legacy, and ego.
-
-In a dimly lit studio surrounded by bulletproof glass and poker royalty, the old gunslinger Doyle Brunson — ten-time WSOP bracelet winner, author of Super/System, and godfather of Texas Hold’em — faced a rising storm in the form of Tom "durrrr" Dwan, a fearless young online phenom with an unpredictable style and nerves of steel.
-
-The hand? Legendary.
-
-Blinds were $300/$600. Dwan opened with 6♦7♦ from the cutoff. Brunson, in the small blind, looked down at A♥Q♠ and made the call. The flop came 5♦8♣9♠ — a dream for Dwan, who flopped the nuts. Brunson checked, and Dwan bet $2,000. Doyle called. The turn brought the A♠. Suddenly, Doyle had top pair — but still, no clue he was drawing dead. He check-called another $5,000 bet.
-
-Then came the river: a brick — 2♣. Doyle checked again. Dwan bet $17,000.
-
-Now came the moment poker fans live for.
-
-Brunson sat back, arms crossed. His eyes — shaded by the cowboy hat — squinted toward Dwan, who sat motionless, betraying nothing. Doyle counted chips. Then, calmly, he check-raised to $45,000.
-
-The crowd held its breath. Dwan barely moved a muscle. After a short pause, he reraised again — to $104,000.
-
-Doyle tanked. He knew Dwan was capable of anything — bluffs, overbets, total madness. But could he really be bluffing this time?
-
-After several minutes, Doyle laid it down.
-
-Dwan smiled. “Nice fold,” he said, as he flipped over the straight — the nuts.
-
-Doyle smirked, unfazed. “You’ll learn that in 40 years or so,” he drawled.
-
-It wasn’t just a hand. It was a moment. A nod of respect from the future to the past, and a warning shot from the future king.`,
-    },
-    {
-      title: 'Phil Hellmuth vs Loose Cannon – Can The Poker Brat Finally Win?',
-      content: `He’s loud. He’s arrogant. But can he back it up?
-
-Phil Hellmuth, the self-proclaimed “Poker Brat” and holder of 17 WSOP bracelets, has always had a love-hate relationship with poker fans. They cheer his wins. They meme his meltdowns. But in one unforgettable PokerStars Big Game episode, Hellmuth found himself in a psychological war — not with another legend, but with an amateur: the "Loose Cannon."
-
-The Loose Cannon was an unknown qualifier — a young math teacher named Ernest Wiggins from Washington, D.C., with just a $100,000 stake to play with. Hellmuth underestimated him from the start. Big mistake.
-
-On one particular hand, Hellmuth raised with K♣K♦. Wiggins called with 9♣10♣. The flop came 8♣J♠Q♦ — boom. Wiggins flopped the nut straight. Hellmuth, holding an overpair, bet aggressively — $6,000. Wiggins called, barely blinking.
-
-The turn was a 2♣ — giving Wiggins a straight and a flush draw. Phil bet again: $14,000.
-
-“I think he’s on tilt,” whispered Antonio Esfandiari from the rail. “He has no clue what he’s up against.”
-
-The river came 4♦. Wiggins checked — a brilliant trap. Hellmuth bet $25,000. Wiggins snap-called.
-
-Phil flipped over his kings with confidence.
-
-Then the table erupted when Wiggins showed the straight.
-
-“WHAT is he DOING calling me there?!” Phil exploded. “He called $25,000 with just a straight? Are you kidding me?!”
-
-No, Phil. He wasn’t kidding. And he walked away with $150,000 in profit and the respect of every home game hero across America.`
-    },
-    {
-      title: 'Daniel Negreanu vs Tony G – Two Monster Hands Collide',
-      content: `What happens when two of poker’s biggest mouths have monster hands at the same time? A battle for the ages.
-
-In a high-stakes televised cash game, Daniel “Kid Poker” Negreanu found himself across the felt from Antanas Guoga — better known as Tony G, the bombastic Lithuanian poker beast known for tilting opponents with his loud, taunting table talk.
-
-The hand began innocently enough.
-
-Negreanu looked down at Q♦Q♣ and raised under the gun. Tony G, on the button, peeked at A♠K♠ and reraised. Daniel, ever the entertainer, tried to bait him with a speech.
-
-“I have a feeling you’re trying to steal again, Tony.”
-
-Tony laughed. “I never steal. I take what's mine.”
-
-Daniel called.
-
-The flop came Q♠J♠9♥. Trouble was brewing. Daniel flopped top set. Tony had a gutshot straight draw and a royal flush draw.
-
-They both checked. The trap was set.
-
-Turn: 10♠.
-
-Fireworks.
-
-Tony bet $5,000. Daniel raised to $20,000. Tony reraised to $50,000.
-
-Negreanu stood up, paced, smiled at the camera. “Well, if I go broke, I go broke,” he said as he shoved for $120,000 more.
-
-Tony snap-called.
-
-Both players stood as the cards were revealed. “Wow,” Tony muttered. “This is gonna be a sick one.”
-
-The river: 2♦.
-
-Negreanu's top set held. The table exploded in applause.
-
-Tony took it like a champ… sort of.
-
-“I’ll get you next time, Daniel! You’re going on the bike!”
-
-Daniel laughed. “I love you, Tony. Even when you lose, you make it fun.”
-
-That hand was more than poker — it was theater. Two giants with massive hands, massive egos, and massive respect.`
-    }
-  ];
+  const toggleExpand = (index) => {
+    setExpanded(expanded === index ? null : index);
+  };
 
   return (
-    <div className="min-h-screen bg-[#24382c] text-white font-sans pt-24 px-6">
-      <h1 className="text-4xl font-bold text-center text-[#ffcc53] mb-12">Poker Stories</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-7xl mx-auto">
-        {stories.map((story, index) => (
-          <div
-            key={index}
-            data-aos="zoom-in-up"
-            className="bg-[#2f4a3b] p-6 rounded-2xl shadow-xl hover:scale-[1.02] transform transition duration-300 cursor-pointer group"
-          >
-            <h2 className="text-2xl font-semibold text-[#ffcc53] mb-4 group-hover:underline">
-              {story.title}
-            </h2>
-            <p className="text-md leading-relaxed line-clamp-6 group-hover:line-clamp-none transition-all duration-500 whitespace-pre-line">
-              {story.content}
-            </p>
+    <div className="min-h-screen bg-[#24382c] text-white font-sans">
+      <header
+        id="nav"
+        className="fixed w-full z-50 top-0 transition-all duration-300 px-6 py-4 bg-[#24382c]"
+      >
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <h1 className="text-[#ffcc53] font-bold text-2xl">Poker.Promo</h1>
+          <nav className="space-x-6 hidden md:block">
+            <Link href="/" className="hover:text-[#f2cc67] transition">Home</Link>
+            <Link href="/platforms" className="hover:text-[#f2cc67] transition">Platforms</Link>
+            <Link href="/about" className="hover:text-[#f2cc67] transition">Beginners</Link>
+            <Link href="/software" className="hover:text-[#f2cc67] transition">Software</Link>
+            <Link href="/custom" className="hover:text-[#f2cc67] transition">Contact</Link>
+          </nav>
+        </div>
+      </header>
+
+      <main className="pt-28 px-6">
+        <section className="max-w-6xl mx-auto" data-aos="fade-up">
+          <h2 className="text-4xl font-bold text-center text-[#f2cc67] mb-12">Legendary Poker Stories</h2>
+
+          <div className="space-y-6">
+            {storiesData.map((item, index) => (
+              <div
+                key={index}
+                className="p-6 bg-[#1a2a20] rounded-xl shadow-md hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                onClick={() => toggleExpand(index)}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <h3 className="text-2xl font-semibold mb-2 text-[#ffcc53]">{item.title}</h3>
+                <p className="text-sm opacity-90">
+                  {expanded === index ? item.details : item.summary}
+                </p>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
+        </section>
+
+        <section className="text-center py-20 px-6" data-aos="zoom-in">
+          <h3 className="text-3xl font-bold mb-4">Have a Crazy Poker Story?</h3>
+          <p className="text-lg max-w-xl mx-auto mb-6">Submit your most memorable hand or experience and we might feature it here!</p>
+          <Link href="/custom">
+            <button className="bg-[#f2cc67] text-[#24382c] font-semibold px-8 py-4 rounded-full hover:bg-[#ffcc53] transition-all hover:scale-105">
+              Submit Your Story
+            </button>
+          </Link>
+        </section>
+      </main>
+
+      <footer className="text-center py-6 bg-[#24382c] text-[#f2cc67] text-sm">
+        <p>© {new Date().getFullYear()} Poker.Promo – Built for poker lovers, by poker lovers.</p>
+      </footer>
     </div>
   );
 }
+
