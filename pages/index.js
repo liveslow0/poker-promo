@@ -58,22 +58,23 @@ export default function Home() {
               <Link href="/custom">
                 <button className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300">Services</button>
               </Link>
-        <a
-  href="https://youtube.com/@pokerpromo"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-8 inline-block animate-bounce"
-  data-aos="zoom-in"
->
-  <button className="flex items-center gap-3 bg-[#FF0000] text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
-      <path d="M10 15l5.19-3L10 9v6zm12-3c0-1.1-.9-2-2-2h-1.17C18.4 7.84 15.39 6 12 6s-6.4 1.84-6.83 4H4c-1.1 0-2 .9-2 2s.9 2 2 2h1.17C5.6 16.16 8.61 18 12 18s6.4-1.84 6.83-4H20c1.1 0 2-.9 2-2z" />
-    </svg>
-    Watch on YouTube
-  </button>
-</a>
-
             </div>
+
+            {/* YouTube CTA */}
+            <a
+              href="https://youtube.com/@pokerpromo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-block animate-bounce"
+              data-aos="zoom-in"
+            >
+              <button className="flex items-center gap-3 bg-[#FF0000] text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                  <path d="M10 15l5.19-3L10 9v6zm12-3c0-1.1-.9-2-2-2h-1.17C18.4 7.84 15.39 6 12 6s-6.4 1.84-6.83 4H4c-1.1 0-2 .9-2 2s.9 2 2 2h1.17C5.6 16.16 8.61 18 12 18s6.4-1.84 6.83-4H20c1.1 0 2-.9 2-2z" />
+                </svg>
+                Watch on YouTube
+              </button>
+            </a>
           </div>
         </section>
 
@@ -124,33 +125,23 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-[#f2cc67] mb-8">Quick Poker Tips</h2>
             <div className="relative overflow-hidden h-40">
               <div className="animate-carousel space-y-6">
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Rounders</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="100">“Fold more often. Most new players lose by calling too much.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="200">“Position is power. Play more hands from the button and cutoff.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="300">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="400">“Bluff with purpose, not just impulse.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="500">“Never slowplay your monsters against loose opponents.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="600">“Every chip saved is a chip earned. Don’t waste chips calling bad bets.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="700">“Aggression wins tournaments. Don’t be afraid to put pressure.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="800">“Tilt control is skill. Walk away when emotions take over.”</blockquote>
-                <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="900">“Great players fold great hands. Don’t marry your cards.”</blockquote>
-         
-  <blockquote className="text-xl italic opacity-90">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Rounders</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Fold more often. Most new players lose by calling too much.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Position is power. Play more hands from the button and cutoff.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Bluff with purpose, not just impulse.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Don’t slowplay monsters unless you have a very good reason.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Aggression wins. Be the bettor, not the caller.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Poker is people. Study habits more than hands.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“You can’t bluff someone who isn’t thinking.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Bankroll management is more important than strategy.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Only play when you're focused. Tilt kills skill.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Lose small, win big. Fold early, trap later.”</blockquote>
-  <blockquote className="text-xl italic opacity-90">“Great folds win more money than great calls.”</blockquote>
-</div>
-  
-         
+                {[
+                  "If you can’t spot the sucker in your first half hour at the table, then you are the sucker. – Rounders",
+                  "Fold more often. Most new players lose by calling too much.",
+                  "Position is power. Play more hands from the button and cutoff.",
+                  "It’s not about the cards you’re dealt, but how you play them.",
+                  "Bluff with purpose, not just impulse.",
+                  "Never slowplay your monsters against loose opponents.",
+                  "Every chip saved is a chip earned. Don’t waste chips calling bad bets.",
+                  "Aggression wins tournaments. Don’t be afraid to put pressure.",
+                  "Tilt control is skill. Walk away when emotions take over.",
+                  "Great players fold great hands. Don’t marry your cards.",
+                ].map((tip, index) => (
+                  <blockquote key={index} className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay={index * 100}>
+                    {`“${tip}”`}
+                  </blockquote>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -159,27 +150,17 @@ export default function Home() {
           .animate-carousel {
             display: flex;
             flex-direction: column;
-            animation: scrollTips 30s linear infinite;
+            animation: scrollTips 60s linear infinite;
           }
           @keyframes scrollTips {
-            0% { transform: translateY(0%); }
-            100% { transform: translateY(-100%); }
+            0% {
+              transform: translateY(0%);
+            }
+            100% {
+              transform: translateY(-100%);
+            }
           }
         `}</style>
-
-<style jsx>{`
-  .animate-carousel {
-    display: flex;
-    flex-direction: column;
-    animation: scrollTips 60s linear infinite;
-  }
-
-  @keyframes scrollTips {
-    0% { transform: translateY(0%); }
-    100% { transform: translateY(-100%); }
-  }
-`}</style>
-
 
         {/* CTA */}
         <section className="text-center py-20 px-6 bg-white" data-aos="fade-up">
@@ -212,4 +193,3 @@ export default function Home() {
     </div>
   );
 }
-
