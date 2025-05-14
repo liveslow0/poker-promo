@@ -58,6 +58,21 @@ export default function Home() {
               <Link href="/custom">
                 <button className="bg-[#24382c] border border-[#f2cc67] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-[#1a2a20] hover:scale-105 transition-all duration-300">Services</button>
               </Link>
+        <a
+  href="https://youtube.com/@pokerpromo"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-8 inline-block animate-bounce"
+  data-aos="zoom-in"
+>
+  <button className="flex items-center gap-3 bg-[#FF0000] text-white px-6 py-3 rounded-full shadow-lg hover:scale-110 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+      <path d="M10 15l5.19-3L10 9v6zm12-3c0-1.1-.9-2-2-2h-1.17C18.4 7.84 15.39 6 12 6s-6.4 1.84-6.83 4H4c-1.1 0-2 .9-2 2s.9 2 2 2h1.17C5.6 16.16 8.61 18 12 18s6.4-1.84 6.83-4H20c1.1 0 2-.9 2-2z" />
+    </svg>
+    Watch on YouTube
+  </button>
+</a>
+
             </div>
           </div>
         </section>
