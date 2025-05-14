@@ -105,4 +105,17 @@ body {
 }
 
 
+<style jsx>{`
+  .animate-carousel {
+    display: flex;
+    flex-direction: column;
+    animation: scrollTips 60s linear infinite;
+  }
+
+  @keyframes scrollTips {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-100%); }
+  }
+`}</style>
+
 
