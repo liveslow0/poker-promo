@@ -167,6 +167,20 @@ export default function Home() {
           }
         `}</style>
 
+<style jsx>{`
+  .animate-carousel {
+    display: flex;
+    flex-direction: column;
+    animation: scrollTips 60s linear infinite;
+  }
+
+  @keyframes scrollTips {
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(-100%); }
+  }
+`}</style>
+
+
         {/* CTA */}
         <section className="text-center py-20 px-6 bg-white" data-aos="fade-up">
           <h3 className="text-3xl font-bold mb-4">Need Help Getting Started?</h3>
