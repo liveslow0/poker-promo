@@ -134,7 +134,23 @@ export default function Home() {
                 <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="700">“Aggression wins tournaments. Don’t be afraid to put pressure.”</blockquote>
                 <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="800">“Tilt control is skill. Walk away when emotions take over.”</blockquote>
                 <blockquote className="text-xl italic opacity-90" data-aos="fade-up" data-aos-delay="900">“Great players fold great hands. Don’t marry your cards.”</blockquote>
-              </div>
+         
+  <blockquote className="text-xl italic opacity-90">“If you can’t spot the sucker in your first half hour at the table, then you are the sucker.” – Rounders</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Fold more often. Most new players lose by calling too much.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Position is power. Play more hands from the button and cutoff.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“It’s not about the cards you’re dealt, but how you play them.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Bluff with purpose, not just impulse.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Don’t slowplay monsters unless you have a very good reason.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Aggression wins. Be the bettor, not the caller.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Poker is people. Study habits more than hands.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“You can’t bluff someone who isn’t thinking.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Bankroll management is more important than strategy.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Only play when you're focused. Tilt kills skill.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Lose small, win big. Fold early, trap later.”</blockquote>
+  <blockquote className="text-xl italic opacity-90">“Great folds win more money than great calls.”</blockquote>
+</div>
+  
+         
             </div>
           </div>
         </section>
